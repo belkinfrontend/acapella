@@ -9,11 +9,21 @@ a {
 	color: #2b2b2b;
 }
 a:hover {
-	color: #ea4c89;
+	//color: #ea4c89;
+}
+hr {
+	width: 100px;
+	height: 3px;
+	background: #e4e4e4;
+	border: none;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 51px;
 }
 body {
 	//background: #e2e2e2;
 	color: #2b2b2b;
+	font-family: "Montserrat";
 }
 
 header {
@@ -28,8 +38,8 @@ header {
 	align-items: center;
 }
 .burger {
-	height: 28px;
-	width: 28px;
+	height: 26px;
+	width: 26px;
 	cursor: pointer;
 }
 .burger div {
@@ -55,7 +65,16 @@ h1, h5 {
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
-
+h1 {
+	font-size: 38px;
+}
+h5 {
+	color: #777;
+	font-size: 18px;
+}
+.overlay {
+    position: relative;
+}
 .portfolio_img {
 	display: -webkit-flex;
 	display: -ms-flex;
@@ -65,30 +84,115 @@ h1, h5 {
 	align-items: flex-start;
 	margin-top: 70px;
 }
-.portfolio_img img {
+.portfolio_img .img1 {
 	width: 500px;
-	//flex-basis: 200px;
+	height: 400px;
 	flex-grow: 1;
-
+	background-image: url('../img/portfolio_1.png') ;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 }
-.portfolio_img img:hover {
+.portfolio_img .img2 {
+	width: 500px;
+	height: 400px;
+	flex-grow: 1;
+	background-image: url('../img/portfolio_2.png') ;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.portfolio_img .img3 {
+	width: 500px;
+	height: 400px;
+	flex-grow: 1;
+	background-image: url('../img/portfolio_3.png') ;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.portfolio_img .img4 {
+	width: 500px;
+	height: 400px;
+	flex-grow: 1;
+	background-image: url('../img/portfolio_4.png') ;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.portfolio_img .img5 {
+	width: 500px;
+	height: 400px;
+	flex-grow: 1;
+	background-image: url('../img/portfolio_5.png') ;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.portfolio_img .img6 {
+	width: 500px;
+	height: 400px;
+	flex-grow: 1;
+	background-image: url('../img/portfolio_6.png') ;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.overlay:hover:before {
+	display: block;
+}
+
+.overlay:before {
+    position: absolute;
+    content: " ";
+	color: #fff;
+	text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 0;
+}
+
+.red:before {
+    background-color: rgba(255,0,0,0.5);
+}
+
+/*.portfolio_img img:hover {
 	//z-index: 1000;
 	opacity: .3;
 
-}
+}*/
 
 .button {
 	text-align: center;
 }
 button {
-	background: #a24b45;
+	width: 207px;
+	height: 42px;
 	color: #fff;
-	padding: 10px 45px;
-	border-radius: 20px;
+	font-size: 16px;
 	text-transform: uppercase;
 	border: none;
 	text-align: center;
 	margin: 60px auto;
+
+
+	border-radius: 20px;
+	background-color: #cb6f6d;
 }
 button:hover {
 	background: #ea4c89;
@@ -117,7 +221,7 @@ button:hover {
 }
 
 .icons a i {
-	font-size: 42px;
+	font-size: 48px;
 	color: #2b2b2b;
 }
 .icons a:hover i {
@@ -132,23 +236,27 @@ button:hover {
 	text-align: center;
 	justify-content: center;
 	align-items: flex-start;
+	transition: 0s;
+	font-size: 18px;
+
 
 }
 .contacts>div {
 	width: 400px;
 	height: 250px;
-	padding: 40px 0;
+	padding: 40px 0 140px;
 	flex-grow: 1;
-
-
+	transition: 0s;
 }
 .contacts>div:hover {
 	background: #2b2b2b;
 	color: #fff;
+	transition: 0s;
 }
 .contacts>div:hover a {
-
-	color: #ea4c89;
+	text-decoration: underline;
+	text-decoration-color: #cb6f6d;
+	color: #fff;
 }
 
 
@@ -168,7 +276,7 @@ button:hover {
 
 .footer_title {
 	text-transform: capitalize;
-	margin-bottom: 40px;
+	margin-bottom: 22px;
 
 }
 .address a {
@@ -179,6 +287,7 @@ button:hover {
 	background: #231f20;
 	color: #fff;
 	height: 80px;
+	font-size: 16px;
 
 	display: -webkit-flex;
 	display: -ms-flex;
@@ -199,15 +308,18 @@ button:hover {
 	color: #ea4c89;
 }
 
-/*-------------------------add class jquery*/
+/*-------------------------add class */
 
-.img{
-    width: 150px;
-    height: 150px;
-    background: url(../img/dribbble_shots_images_8.png) no-repeat center top;
+.text-hide {
+	color: #fff;
+	opacity: 0;
 }
-.img-overlay{
-    width: 100%;
-    height: 100%;
-    background: rgba(255,0,0,0.3);
+
+.red:hover .text-hide {
+	opacity: 1;
+	color: #fff;
+}
+.text-hide p {
+	text-align: center;
+	padding: 50px 0;
 }
